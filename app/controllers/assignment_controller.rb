@@ -11,6 +11,7 @@ class AssignmentController < ApplicationController
       # from_unit = query[1]
       to_unit = query.last
 
+      
       if %w[kg lb m metre ft feet].include?(query[0].scan(/[a-zA-Z]/).join(''))
         from_unit = query[0].scan(/[a-zA-Z]/).join('')
       elsif %w[kg lb m metre ft feet].include?(query[1])
